@@ -24,7 +24,7 @@ jobs:
           chmod 600 ~/.oci/private_key.pem
           sed -i 's|key_file=.*|key_file=/home/runner/.oci/private_key.pem|' ~/.oci/config
       - name: Run
-        run: php run.php
+        run: php index.php
         env:
           OCI_REGION: ${{ secrets.OCI_REGION }}
           OCI_USER_ID: ${{ secrets.OCI_USER_ID }}
